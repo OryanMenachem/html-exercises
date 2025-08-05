@@ -8,7 +8,6 @@
     <h1>Conference Registration</h1>
 
     <form>
-      <!-- Personal Information -->
       <fieldset>
         <legend>Personal Information</legend>
 
@@ -25,16 +24,9 @@
         <input type="email" id="email" name="email" required /><br />
 
         <label for="phone">Phone:</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          required
-          pattern="^\+?[0-9\s\-]{7,15}$"
-        /><br />
+        <input type="tel" id="phone" name="phone" required /><br />
       </fieldset>
 
-      <!-- Ticket & Workshops -->
       <fieldset>
         <legend>Ticket & Workshops</legend>
 
@@ -95,7 +87,6 @@
         /><br />
       </fieldset>
 
-      <!-- Payment Details -->
       <fieldset>
         <legend>Payment Details</legend>
 
@@ -105,9 +96,7 @@
           id="cardNumber"
           name="cardNumber"
           required
-          pattern="[0-9\s]{13,19}"
           inputmode="numeric"
-          autocomplete="cc-number"
         /><br />
 
         <label for="expiryDate">Expiry Date:</label>
@@ -119,12 +108,10 @@
           id="cvv"
           name="cvv"
           required
-          pattern="[0-9]{3,4}"
           inputmode="numeric"
         /><br />
       </fieldset>
 
-      <!-- Agreements -->
       <fieldset>
         <legend>Agreements</legend>
 
