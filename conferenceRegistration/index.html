@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Conference Registration Form</title>
+  </head>
+  <body>
+    <h1>Conference Registration</h1>
+
+    <form>
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullName">Full Name:</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          required
+          minlength="2"
+        /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="phone">Phone:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          pattern="^\+?[0-9\s\-]{7,15}$"
+        /><br />
+      </fieldset>
+
+      <!-- Ticket & Workshops -->
+      <fieldset>
+        <legend>Ticket & Workshops</legend>
+
+        <label for="ticketType">Ticket Type:</label>
+        <select id="ticketType" name="ticketType" required>
+          <option value="">-- Select Ticket Type --</option>
+          <option value="standard">Standard</option>
+          <option value="vip">VIP</option>
+          <option value="student">Student</option></select
+        ><br />
+
+        <p>Workshops:</p>
+        <input
+          type="checkbox"
+          id="workshop1"
+          name="workshops"
+          value="web-performance"
+        />
+        <label for="workshop1">Web Performance</label><br />
+
+        <input
+          type="checkbox"
+          id="workshop2"
+          name="workshops"
+          value="accessibility"
+        />
+        <label for="workshop2">Accessibility</label><br />
+
+        <input
+          type="checkbox"
+          id="workshop3"
+          name="workshops"
+          value="testing"
+        />
+        <label for="workshop3">Testing</label><br />
+
+        <p>Diet Preference:</p>
+        <input type="radio" id="dietNone" name="diet" value="none" />
+        <label for="dietNone">None</label><br />
+
+        <input type="radio" id="dietVegan" name="diet" value="vegan" />
+        <label for="dietVegan">Vegan</label><br />
+
+        <input type="radio" id="dietKosher" name="diet" value="kosher" />
+        <label for="dietKosher">Kosher</label><br />
+
+        <input type="radio" id="dietHalal" name="diet" value="halal" />
+        <label for="dietHalal">Halal</label><br />
+
+        <input type="radio" id="dietOther" name="diet" value="other" />
+        <label for="dietOther">Other</label><br />
+
+        <label for="dietOtherDetails">Please specify:</label>
+        <input
+          type="text"
+          id="dietOtherDetails"
+          name="dietOtherDetails"
+        /><br />
+      </fieldset>
+
+      <!-- Payment Details -->
+      <fieldset>
+        <legend>Payment Details</legend>
+
+        <label for="cardNumber">Card Number:</label>
+        <input
+          type="text"
+          id="cardNumber"
+          name="cardNumber"
+          required
+          pattern="[0-9\s]{13,19}"
+          inputmode="numeric"
+          autocomplete="cc-number"
+        /><br />
+
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="month" id="expiryDate" name="expiryDate" required /><br />
+
+        <label for="cvv">CVV:</label>
+        <input
+          type="password"
+          id="cvv"
+          name="cvv"
+          required
+          pattern="[0-9]{3,4}"
+          inputmode="numeric"
+        /><br />
+      </fieldset>
+
+      <!-- Agreements -->
+      <fieldset>
+        <legend>Agreements</legend>
+
+        <label for="studentID">Upload Student ID (PDF, JPG, PNG):</label>
+        <input
+          type="file"
+          id="studentID"
+          name="studentID"
+          accept=".pdf,.jpg,.jpeg,.png"
+        /><br />
+
+        <input type="checkbox" id="terms" name="terms" required />
+        <label for="terms">I agree to the terms and conditions</label><br />
+      </fieldset>
+
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
